@@ -1,5 +1,4 @@
-require('dotenv').config();
-
+const apiKey = process.env.API_KEY
 
 const fruitForm = document.querySelector("#inputSection form")
 const fruitList = document.querySelector("#fruitSection ul")
@@ -17,7 +16,7 @@ async function fetchFruitData(fruit) {
   try {
     const response = await fetch(`https://fruit-api-5v0j.onrender.com/fruits/${fruit}`)
 
-    const imageResponse = await fetch(`https://pixabay.com/api/?q=${fruit}+fruit&key=<my-key>`)
+    const imageResponse = await fetch(`https://pixabay.com/api/?q=${fruit}+fruit&key=${apiKey}`)
 
     if (response.ok && imageResponse.ok){
       const data = await response.json()

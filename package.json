@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "watchify ./script.js -o bundle.js"
+    "dev": "watchify script.js -o bundle.js -v -t [ envify --API_KEY '$API_KEY' ]"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,6 @@
     "watchify": "^4.0.0"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "envify": "^4.1.0"
   }
 }
