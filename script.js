@@ -38,7 +38,7 @@ let calories = 0
 const fruitCalories = {}
 
 function addFruitNutrition(fruit) {
-  // Define a key on fruitCalories object with value
+  // Define a key on fruitCalories object with value added
   fruitCalories[fruit.name] = fruit["nutritions"]["calories"]
   // Add to the calories variable with value on data object
   calories += fruit["nutritions"]["calories"]
